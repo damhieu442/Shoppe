@@ -30,8 +30,10 @@
     display: inline-block;
     font-size: 1.4rem;
     color: var(--white-color);
+    background-color: var(--primary-color);
     text-decoration: none;
     font-weight: 300;
+    border: none;
 }
 
 .header__navbar-item:hover,
@@ -258,6 +260,17 @@
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
+    z-index: -1;
+    display: none;
+}
+
+.auth-forms{
+    width: 500px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: -1;
+    display: none;
 }
 
 .auth-form-contaier{
@@ -283,7 +296,9 @@
     font-size: 1.6rem;
     color: var(--primary-color);
     font-weight: 400;
+    border: none;
     cursor: pointer;
+    background-color: var(--white-color);
 }
 
 .auth-form__input{

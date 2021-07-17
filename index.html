@@ -133,10 +133,10 @@
                             </a>
                         </li>
                         <li class="header__navbar-item  header__navbar-item-separate">
-                            <a href="" class="header__navbar-item-link header__navbar-item-strong">Đăng ký</a>
+                            <button  class="header__navbar-item-link header__navbar-item-strong js-header">Đăng ký</button>
                         </li>
                         <li class="header__navbar-item ">
-                            <a href="" class="header__navbar-item-link header__navbar-item-strong">Đăng nhập</a>
+                            <button  class="header__navbar-item-link header__navbar-item-strong js-header js-login">Đăng nhập</button>
                         </li>
                     </ul>
                 </nav>
@@ -206,15 +206,15 @@
         </footer>
 
     </div>
-    <!-- <div class="modal">
+    <div class="modal">
         <div class="modal__overlay"></div>
         <div class="modal__body">
-            Register form
+            <!-- Register form -->
             <div class="auth-form">
                 <div class="auth-form-contaier">
                     <div class="auth-form-header">
                         <h3 class="auth-form-heading">Đăng Ký</h3>
-                        <span class="auth-form-switch-btn">Đăng Nhập</span>
+                        <button class="auth-form-switch-btn js-header-1 js-login1">Đăng Nhập</button>
                     </div>
                     <div class="auth-form__form">
                         <div class="auth-form__group">
@@ -235,7 +235,7 @@
                         </p>
                     </div>
                     <div class="auth-form-control">
-                        <button class="btn auth-form-control-back btn--normal">TRỞ LẠI</button>
+                        <button class="btn auth-form-control-back btn--normal js-back">TRỞ LẠI</button>
                         <button class="btn btn-primary">ĐĂNG KÝ</button>
                     </div>
                 </div>
@@ -250,12 +250,12 @@
                     </a>
                 </div>
             </div>
-            login form
-            <div class="auth-form">
+            <!-- login form -->
+            <div class="auth-forms">
                 <div class="auth-form-contaier">
                     <div class="auth-form-header">
                         <h3 class="auth-form-heading">Đăng Nhập</h3>
-                        <span class="auth-form-switch-btn">Đăng Ký</span>
+                        <button class="auth-form-switch-btn js-header-1">Đăng Ký</button>
                     </div>
                     <div class="auth-form__form">
                         <div class="auth-form__group">
@@ -273,7 +273,7 @@
                         </div>
                     </div>
                     <div class="auth-form-control">
-                        <button class="btn auth-form-control-back btn--normal">TRỞ LẠI</button>
+                        <button class="btn auth-form-control-back btn--normal js-back">TRỞ LẠI</button>
                         <button class="btn btn-primary">ĐĂNG NHẬP</button>
                     </div>
                 </div>
@@ -289,7 +289,107 @@
                 </div>
             </div>
         </div>
-    </div> -->
-    
+    </div>
+    <script>
+        const headers = document.querySelectorAll('.js-header');
+        const headers_1 = document.querySelectorAll('.js-header-1');
+        const modal = document.querySelector('.modal');
+        const modal__overlay = document.querySelector('.modal__overlay');
+        const auth_form = document.querySelector('.auth-form');
+        const auth_forms = document.querySelector('.auth-forms');
+        const backs = document.querySelectorAll('.js-back');
+        let login = document.querySelector('.js-login').innerHTML;
+        var login1 = document.querySelector('.js-login1');
+        
+        for(const header of headers)
+            {
+                if(header.innerHTML.length == 9)
+                    {
+                        header.addEventListener('click', function(){
+                            modal.classList.add('add_index');
+                            modal__overlay.classList.add('open');
+                            auth_forms.classList.add('open');
+            
+                        })
+                        for(const header_1 of headers_1)
+                            {
+                                if(header_1.innerHTML.length == 9)
+                                    {
+                                        header_1.addEventListener('click', function(){
+                                            auth_form.classList.add('open')
+                                            auth_forms.classList.add('remove')
+                                        })
+                                    }
+                                else
+                                    {
+                                        header_1.addEventListener('click', function(){
+                                            auth_form.classList.add('remove')
+                                            auth_forms.classList.add('open')
+                                        })
+                                    }
+                            }
+                    }
+                else
+                    {
+                        header.addEventListener('click', function(){
+                            modal.classList.add('add_index');
+                            modal__overlay.classList.add('open');
+                            auth_form.classList.add('open');
+            
+                        })
+                        for(const header_1 of headers_1)
+                            {
+                                if(header_1.innerHTML.length == 9)
+                                    {
+                                        header_1.addEventListener('click', function(){
+                                            auth_form.classList.add('open')
+                                            auth_forms.classList.add('remove')
+                                        })
+                                    }
+                                else
+                                    {
+                                        header_1.addEventListener('click', function(){
+                                            auth_form.classList.add('remove')
+                                            auth_forms.classList.add('open')
+                                        })
+                                    }
+                            }
+                    }
+            }
+
+        // for(const header_1 of headers_1)
+        // {
+        //     if(header_1.innerHTML.length == 9)
+        //         {
+        //             header_1.addEventListener('click', function(){
+        //                 modal.classList.add('add_index')
+        //                 modal__overlay.classList.add('open')
+        //                 auth_form.classList.add('open')
+        //                 auth_forms.classList.add('remove')
+        //             })
+        //         }
+        //     else
+        //         {
+        //             header.addEventListener('click', function(){
+        //                 modal.classList.add('add_index')
+        //                 modal__overlay.classList.add('open')
+        //                 auth_form.classList.add('remove')
+        //                 auth_forms.classList.add('open')
+        //             })
+        //         }
+        // }
+
+        function remove(){
+            modal.classList.remove('add_index');
+            modal__overlay.classList.remove('open');
+            auth_form.classList.remove('open');
+            auth_forms.classList.remove('open');
+        }
+
+        for( back of backs)
+            {
+                back.addEventListener('click',remove)
+            }
+    </script>
 </body>
 </html>
