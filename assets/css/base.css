@@ -71,6 +71,7 @@ html{
 
 .open{
     display: block !important;
+    animation: fadeIn ease-in 0.2s;
 }
 
 .modal__overlay{
@@ -92,7 +93,7 @@ html{
 }
 
 .btn{
-    min-width: 142px;
+    min-width: 124px;
     height: 36px;
     text-decoration: none;
     border: none;
