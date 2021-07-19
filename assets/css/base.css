@@ -20,6 +20,7 @@ html{
     box-sizing: border-box;
 }
 
+/* resposive */
 .grid{
     width: 1200px;
     max-width: 100%;
@@ -33,6 +34,20 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
 }
 
 /* Animation */
@@ -103,7 +118,7 @@ html{
     outline: none;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     line-height: 1.6rem;
@@ -122,5 +137,22 @@ html{
 .btn.btn-primary{
     color: var(--white-color);
     background-color: var(--primary-color);
+}
+
+.select-input{
+    padding: 0 12px;
+    height: 34px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.select-input:hover .select-input-list{
+    display: block;
 }
 
