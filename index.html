@@ -255,12 +255,198 @@
                 </div>
             </div>
         </header>
+        <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <!-- Register form -->
+                <div class="auth-form">
+                    <div class="auth-form-contaier">
+                        <div class="auth-form-header">
+                            <h3 class="auth-form-heading">Đăng Ký</h3>
+                            <button class="auth-form-switch-btn js-header-1 js-login1">Đăng Nhập</button>
+                        </div>
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu của bạn">
+                            </div>
+                        </div>
+                        <div class="auth-form__aside">
+                            <p class="auth-form-policy-text">
+                                Bằng việc đăng ký, bạn đồng ý với Shopee về
+                                <a href="" class="auth-form-text-lick">Điều khoản dịch vụ</a> &
+                                <a href="" class="auth-form-text-lick">Chính sách bảo mật</a>
+                            </p>
+                        </div>
+                        <div class="auth-form-control">
+                            <button class="btn auth-form-control-back btn--normal js-back">TRỞ LẠI</button>
+                            <button class="btn btn-primary">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+                    <div class="auth-form-social">
+                        <a href="" class="auth-form-social-facebook btn btn-size-s btn-with-icon">
+                            <i class="auth-form-social-icon fab fa-facebook-square"></i>
+                            <span class="auth-form-social-title">Kết nối với Facebook</span>
+                        </a>
+                        <a href="" class="auth-form-social-google btn btn-size-s btn-with-icon">
+                            <i class="auth-form-social-icon fab fa-google"></i>
+                            <span class="auth-form-social-title">Kết nối với Google</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- login form -->
+                <div class="auth-forms">
+                    <div class="auth-form-contaier">
+                        <div class="auth-form-header">
+                            <h3 class="auth-form-heading">Đăng Nhập</h3>
+                            <button class="auth-form-switch-btn js-header-1">Đăng Ký</button>
+                        </div>
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email/Số Điện thoai/Tên đăng nhập">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu">
+                            </div>
+                        </div>
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+                                <span class="auth-form__help-separate"></span>
+                                <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                            </div>
+                        </div>
+                        <div class="auth-form-control">
+                            <button class="btn auth-form-control-back btn--normal js-back">TRỞ LẠI</button>
+                            <button class="btn btn-primary">ĐĂNG NHẬP</button>
+                        </div>
+                    </div>
+                    <div class="auth-form-social">
+                        <a href="" class="auth-form-social-facebook btn btn-size-s btn-with-icon">
+                            <i class="auth-form-social-icon fab fa-facebook-square"></i>
+                            <span class="auth-form-social-title">Kết nối với Facebook</span>
+                        </a>
+                        <a href="" class="auth-form-social-google btn btn-size-s btn-with-icon">
+                            <i class="auth-form-social-icon fab fa-google"></i>
+                            <span class="auth-form-social-title">Kết nối với Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <script>
+            var headers = document.querySelectorAll('.js-header');
+            var headers_1 = document.querySelectorAll('.js-header-1');
+            var modal = document.querySelector('.modal');
+            var modal__overlay = document.querySelector('.modal__overlay');
+            var auth_form = document.querySelector('.auth-form');
+            var auth_forms = document.querySelector('.auth-forms');
+            var backs = document.querySelectorAll('.js-back');
+            
+            for(const header of headers)
+                {
+                    if(header.innerHTML.length == 9)
+                        {
+                            header.addEventListener('click', function(){
+                                modal.classList.add('add_index');
+                                modal__overlay.classList.add('open');
+                                auth_forms.classList.add('open');
+                            })
+                            // for(const header_1 of headers_1)
+                            //     {
+                            //         if(header_1.innerHTML.length == 9)
+                            //             {
+                            //                 header_1.addEventListener('click', function(){
+                            //                     auth_form.classList.add('open')
+                            //                     auth_forms.classList.add('remove')
+                            //                 })
+                            //             }
+                            //         else
+                            //             {
+                            //                 header_1.addEventListener('click', function(){
+                            //                     auth_form.classList.add('remove')
+                            //                     auth_forms.classList.add('open')
+                            //                 })
+                            //             }
+                            //     }
+                        }
+                    else
+                        {
+                            header.addEventListener('click', function(){
+                                modal.classList.add('add_index');
+                                modal__overlay.classList.add('open');
+                                auth_form.classList.add('open');
+                            })
+                            // for(const header_1 of headers_1)
+                            //     {
+                            //         if(header_1.innerHTML.length == 9)
+                            //             {
+                            //                 header_1.addEventListener('click', function(){
+                            //                     auth_form.classList.add('open')
+                            //                     auth_forms.classList.add('remove')
+                            //                 })
+                            //             }
+                            //         else
+                            //             {
+                            //                 header_1.addEventListener('click', function(){
+                            //                     auth_form.classList.add('remove')
+                            //                     auth_forms.classList.add('open')
+                            //                 })
+                            //             }
+                            //     }
+                        }
+                }
+    
+            // for(const header_1 of headers_1)
+            // {
+            //     if(header_1.innerHTML.length == 9)
+            //         {
+            //             header_1.addEventListener('click', function(){
+            //                 modal.classList.add('add_index')
+            //                 modal__overlay.classList.add('open')
+            //                 auth_form.classList.add('open')
+            //                 auth_forms.classList.add('remove')
+            //             })
+            //         }
+            //     else
+            //         {
+            //             header.addEventListener('click', function(){
+            //                 modal.classList.add('add_index')
+            //                 modal__overlay.classList.add('open')
+            //                 auth_form.classList.add('remove')
+            //                 auth_forms.classList.add('open')
+            //             })
+            //         }
+            // }
+    
+            function remove(){
+                modal.classList.remove('add_index');
+                modal__overlay.classList.remove('open');
+                auth_form.classList.remove('open');
+                auth_forms.classList.remove('open');
+            }
+    
+            for( back of backs)
+                {
+                    back.addEventListener('click',remove)
+                }
+        </script>
 
+
+        <!-- Not logged  -->
+
+        <!-- Logged -->
         <div class="app_container">
             <div class="grid">
                 <div class="grid__row app_content">
                     <div class="grid__column-2">
                         <nav class="category">
+                            <img class="category_img" src="https://cf.shopee.vn/file/24140ce6d36c42791d5f5340c3c3c1cd_tn" alt="">
                             <h3 class="category_heading">DANH MỤC</h3>
                             <ul class="category-list">
                                 <li class="category-item category-item-active js-category-item">
@@ -305,8 +491,8 @@
                     <div class="grid__column-10">
                         <div class="home-filter">
                             <span class="home-filter-label">Sắp xếp theo</span>
-                            <button class="home-filter-btn btn">Phổ biến</button>
-                            <button class="home-filter-btn btn btn-primary">Mới nhất</button>
+                            <button class="home-filter-btn btn btn-primary">Phổ biến</button>
+                            <button class="home-filter-btn btn">Mới nhất</button>
                             <button class="home-filter-btn btn">Bán chạy</button>
                             <div class="select-input">
                                 <span class="select-input-label">Giá</span>
@@ -407,12 +593,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/14fad7b72abaf5954c2267520ea8c65b);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda USB kết nối Wifi W311Mi tốc độ 150Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫179.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -426,9 +612,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 268</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -442,12 +628,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/0b13e8e96ed812d7bb3cdbfb39497864_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda USB kết nối Wifi U10 chuẩn AC tốc độ 650Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫429.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -461,9 +647,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 152</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -477,12 +663,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/e938fc64d1bbafc77b8bb16b7cda24f2_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC8 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫949.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -496,9 +682,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 141</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -512,12 +698,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/69a5570d3a1d0c25d4ef4183b8b181a1_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC10 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫1.299.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -531,9 +717,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 108</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -547,12 +733,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/b020b6791f753b615307307be0a935e8_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Bộ chia mạng Switch SG105 5 cổng Gigabit - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫399.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -566,9 +752,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 104</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -582,12 +768,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/4b156f9f918422a48916d7766947edf1_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Bộ phát Wifi di động 4G LTE 4G180 - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫1.799.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -601,9 +787,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 80</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -617,9 +803,9 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/18cc0d8f90a01d1a3cb0ca14fd802d38_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Camera IP Wifi Tenda CP3 Full HD 1080P 360° - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
                                             <div class="home-product-item-price-current">₫649.000</div>
@@ -636,9 +822,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 55</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -652,12 +838,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d8f06232ac2a98c0c289ea7439cfd8ab_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC6 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫849.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -671,9 +857,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 84</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -687,12 +873,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/c3b4c2f63878296da6e41f33f8613770_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda USB kết nối Wifi U1 tốc độ 300Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫279.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -706,9 +892,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 142</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -722,12 +908,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/9308b383e7a1b17a16b6baafc428c8bf_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda USB kết nối Wifi W311MA tốc độ 150Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫209.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -741,9 +927,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 77</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -757,12 +943,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/f0d7e545271d0abd5d624e33d1c85113_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Bộ chia mạng Switch SG108 8 cổng Ethernet - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫499.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -776,9 +962,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 50</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -792,12 +978,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/648338ab0346fbe2490459603b17566a_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Bộ kích sóng Wifi A301 Chuẩn N 300Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫429.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -811,9 +997,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 119</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -827,12 +1013,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/9bc6faa9ec6856c2acdfa47f7098fde4_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda USB kết nối Wifi U9 chuẩn AC tốc độ 650Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫399.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -846,9 +1032,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 83</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -862,12 +1048,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/46c9247b20d9060ed85e6020dad88ef9_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Bộ phát Wifi di động 4G LTE 4G185 - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫1.799.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -881,9 +1067,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 53</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -897,12 +1083,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/af954d0747568bb525a3f30a46fe5126_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC7 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫999.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -916,9 +1102,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 63</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -932,12 +1118,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/29cae0473c79ae2be11e82b82dbaf8cc_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Ổ cắm điện Wi-fi thông minh điều khiển từ xa SP3 - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫409.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -951,9 +1137,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 27</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -967,12 +1153,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/6893e4e6e7435bf120e64b7b781213a2_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Bộ phát Wifi di động 4G LTE 4G03 - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫1.999.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -986,9 +1172,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 53</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -1002,12 +1188,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/feedcf6b435caf9d34c840aa7a30f2fc_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Bộ kích sóng Wifi A18 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫999.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -1021,9 +1207,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 33</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -1037,12 +1223,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/5f728a2e5bc4c4460a4239ef40e6c34d_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Bộ chia mạng Switch S16 16 cổng Ethernet - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫499.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -1056,9 +1242,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 20</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -1072,12 +1258,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/4a5c2754a87b80d18bb40cdaee807ef3_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC23 Chuẩn AC 2100Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫2.349.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -1091,9 +1277,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 22</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -1107,12 +1293,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/218ec4d18c754588c7de6a4a2335e649_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Hệ thống Wifi Nova Mesh cho gia đình MW5C Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫2.999.000 - ₫3.999.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -1126,9 +1312,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 14</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -1142,12 +1328,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/ee243cdb9a0f205f6e9e7eb3ffd9d804_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Hệ thống Wifi Nova Mesh cho gia đình MW6 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫4.099.000 - ₫4.999.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -1161,9 +1347,9 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
+                                                    <i class="home-product-item-rate-gold fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 20</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -1177,12 +1363,12 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/4af89163344fd0caf35362583395bd55_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">Tenda Thiết bị phát Wifi F9 Chuẩn N 600Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
+                                            <div class="home-product-item-price-current">₫499.000</div>
                                             <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
                                         </div>
                                         <div class="home-product-item-action">
@@ -1198,7 +1384,7 @@
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="fas fa-star"></i>
                                                 </div>
-                                                <div class="home-product-item-sell">Đã bán 1,1k</div>
+                                                <div class="home-product-item-sell">Đã bán 30</div>
                                             </div>
                                         </div>
                                         <div class="home-product-item-origin">
@@ -1212,20 +1398,20 @@
                                 </div>
                                 <div class="grid__column-2-4">
                                     <a class="home-product-item">
-                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/d9df42878c5fb5fd737570a5df79491b_tn);"></div>
+                                        <div class="home-product-item-img" style="background-image: url(https://cf.shopee.vn/file/888a18842cc2115e0bcbfb37352da48e_tn);"></div>
                                         <img src="/assets/img/461691071df30827265cc48e9b5e76f3.png" class="home-product-item-img-ship" alt="">
-                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi AC5 Chuẩn AC 1200Mbps - Hãng phân phối chính thức</h4>
+                                        <h4 class="home-product-item-name">[Mã ELTECHZONE giảm 5% đơn 500K] Tenda Thiết bị phát Wifi TX9 Pro Chuẩn Wifi 6 AX3000Mbps - Hãng phân phối chính thức</h4>
                                         <div class="home-product-item-discount">7% Giảm</div>
                                         <div class="home-product-item-price">
-                                            <div class="home-product-item-price-current">₫649.000</div>
-                                            <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt="">
+                                            <div class="home-product-item-price-current">₫2.699.000</div>
+                                            <!-- <img src="/assets/img/green-free-shipping-icon-792513.png" class="home-product-item-price-img" alt=""> -->
                                         </div>
                                         <div class="home-product-item-action">
                                             <span class="home-product-item-like js-home-product-item-like-liked">
                                                 <i class="home-product-item-like-icon-empty far fa-heart "></i>
                                                 <i class="home-product-item-like-icon-fill fas fa-heart"></i>
                                             </span>
-                                            <div class="home-product-item-evaluate">
+                                            <!-- <div class="home-product-item-evaluate">
                                                 <div class="home-product-item-rate">
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
                                                     <i class="home-product-item-rate-gold fas fa-star"></i>
@@ -1234,7 +1420,7 @@
                                                     <i class="fas fa-star"></i>
                                                 </div>
                                                 <div class="home-product-item-sell">Đã bán 1,1k</div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                         <div class="home-product-item-origin">
                                             <span class="home-product-item-origin-name">TP.Hồ Chí Minh</span>
@@ -1284,199 +1470,183 @@
                 </div>
             </div>
         </div>
+
+
         <footer class="footer">
             <div class="grid">
                 <div class="grid__row">
-                    <div class="grid__column-2-4"></div>
-                    <div class="grid__column-2-4"></div>
-                    <div class="grid__column-2-4"></div>
-                    <div class="grid__column-2-4"></div>
-                    <div class="grid__column-2-4"></div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Trung Tâm Trợ Giúp</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Shopee Blog</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Shopee Mall</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Hướng Dẫn Mua Hàng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Hướng Dẫn Bán Hàng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Thanh Toán</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Shopee Xu</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Vận Chuyển</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Trả Hàng & Hoàn Tiền</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chăm Sóc Khách Hàng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chính Sách Bảo Hành</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">VỀ SHOPEE</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Giới Thiệu Về Shopee Việt Nam</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Tuyển Dụng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Điều Khoản Shopee</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chính Sách Bảo Mật</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chính Hãng</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Kênh Người Bán</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Flash Sales</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Chương Trình Tiếp Thị Liên Kết Shopee</a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">Liên Hệ Với Truyền Thông</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">THANH TOÁN</h3>
+                        <ul class="footer__heading-sell">
+                            <li class="footer__heading-selled">
+                                <div class="footer-background footer-visa" style="width: 55px; height: 18px;"></div>
+                            </li>
+                            <li class="footer__heading-selled">
+                                <div class="footer-background footer-mastercard" style="width: 55px; height: 29px;"></div>
+                            </li>
+                            <li class="footer__heading-selled">
+                                <div class="footer-background footer-jcb" style="width: 55px; height: 23px;"></div>
+                            </li>
+                            <li class="footer__heading-selled">
+                                <div class="footer-background footer-amex" style="width: 55px; height: 24px;"></div>
+                            </li>
+                            <li class="footer__heading-selled">
+                                <div class="footer-background footer-cod_footer" style="width: 50px; height: 29px;"></div>
+                            </li>
+                            <li class="footer__heading-selled">
+                                <div class="footer-background footer-installment_footer"  style="width: 55px; height: 29px;"></div>
+                            </li>
+                            <li class="footer__heading-selled">
+                                <div class="footer-background footer-shopeepay" style="width: 55px; height: 12px;"></div>
+                            </li>
+                        </ul>
+                        <h3 class="footer__heading">ĐƠN VỊ VẬN CHUYỂN</h3>
+                        <ul class="footer__heading-ship">
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-express" style="width: 55px; height: 10px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-ghtk" style="width: 55px; height: 18px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-ghn" style="width: 55px; height: 29px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-viettel_post" style="width: 55px; height: 40px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-vnpost" style="width: 55px; height: 27px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-jnt" style="width: 55px; height: 16px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-grab_express" style="width: 55px; height: 15px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-now" style="width: 38px; height: 32px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-ninja-van" style="width: 50px; height: 20px;"></div>
+                            </li>
+                            <li class="footer__heading-shiped">
+                                <div class="footer-background footer-shopee-best-express" style="width: 55px; height: 22px;"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
+                        <ul class="footer__list">
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">
+                                    <i class="footer-item-icon fab fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">
+                                    <i class="footer-item-icon fab fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                            <li class="footer__list-item">
+                                <a href="" class="footer__list-item-link">
+                                    <i class="footer-item-icon fab fa-linkedin"></i>
+                                    Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>
+                        <div class="footer__download">
+                            <img src="/assets/img/qr_code.png" alt="" class="footer__download_qr">
+                            <div class="footer__download-apps">
+                                <a href="" class="footer__download-apps-link">
+                                    <img src="/assets/img/app_store.png" alt="" class="footer__download-app">
+                                </a>
+                                <a href="" class="footer__download-apps-link">
+                                    <img src="/assets/img/Google_play.png" alt="" class="footer__download-app">
+                                </a>
+                                <a href="" class="footer__download-apps-link">
+                                    <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/1ae215920a31f2fc75b00d4ee9ae8551.png" alt="" class="footer__download-app">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
-
     </div>
-    <div class="modal">
-        <div class="modal__overlay"></div>
-        <div class="modal__body">
-            <!-- Register form -->
-            <div class="auth-form">
-                <div class="auth-form-contaier">
-                    <div class="auth-form-header">
-                        <h3 class="auth-form-heading">Đăng Ký</h3>
-                        <button class="auth-form-switch-btn js-header-1 js-login1">Đăng Nhập</button>
-                    </div>
-                    <div class="auth-form__form">
-                        <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="Email của bạn">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu của bạn">
-                        </div>
-                    </div>
-                    <div class="auth-form__aside">
-                        <p class="auth-form-policy-text">
-                            Bằng việc đăng ký, bạn đồng ý với Shopee về
-                            <a href="" class="auth-form-text-lick">Điều khoản dịch vụ</a> &
-                            <a href="" class="auth-form-text-lick">Chính sách bảo mật</a>
-                        </p>
-                    </div>
-                    <div class="auth-form-control">
-                        <button class="btn auth-form-control-back btn--normal js-back">TRỞ LẠI</button>
-                        <button class="btn btn-primary">ĐĂNG KÝ</button>
-                    </div>
-                </div>
-                <div class="auth-form-social">
-                    <a href="" class="auth-form-social-facebook btn btn-size-s btn-with-icon">
-                        <i class="auth-form-social-icon fab fa-facebook-square"></i>
-                        <span class="auth-form-social-title">Kết nối với Facebook</span>
-                    </a>
-                    <a href="" class="auth-form-social-google btn btn-size-s btn-with-icon">
-                        <i class="auth-form-social-icon fab fa-google"></i>
-                        <span class="auth-form-social-title">Kết nối với Google</span>
-                    </a>
-                </div>
-            </div>
-            <!-- login form -->
-            <div class="auth-forms">
-                <div class="auth-form-contaier">
-                    <div class="auth-form-header">
-                        <h3 class="auth-form-heading">Đăng Nhập</h3>
-                        <button class="auth-form-switch-btn js-header-1">Đăng Ký</button>
-                    </div>
-                    <div class="auth-form__form">
-                        <div class="auth-form__group">
-                            <input type="text" class="auth-form__input" placeholder="Email/Số Điện thoai/Tên đăng nhập">
-                        </div>
-                        <div class="auth-form__group">
-                            <input type="password" class="auth-form__input" placeholder="Mật khẩu">
-                        </div>
-                    </div>
-                    <div class="auth-form__aside">
-                        <div class="auth-form__help">
-                            <a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
-                            <span class="auth-form__help-separate"></span>
-                            <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
-                        </div>
-                    </div>
-                    <div class="auth-form-control">
-                        <button class="btn auth-form-control-back btn--normal js-back">TRỞ LẠI</button>
-                        <button class="btn btn-primary">ĐĂNG NHẬP</button>
-                    </div>
-                </div>
-                <div class="auth-form-social">
-                    <a href="" class="auth-form-social-facebook btn btn-size-s btn-with-icon">
-                        <i class="auth-form-social-icon fab fa-facebook-square"></i>
-                        <span class="auth-form-social-title">Kết nối với Facebook</span>
-                    </a>
-                    <a href="" class="auth-form-social-google btn btn-size-s btn-with-icon">
-                        <i class="auth-form-social-icon fab fa-google"></i>
-                        <span class="auth-form-social-title">Kết nối với Google</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div> 
-    <script>
-        var headers = document.querySelectorAll('.js-header');
-        var headers_1 = document.querySelectorAll('.js-header-1');
-        var modal = document.querySelector('.modal');
-        var modal__overlay = document.querySelector('.modal__overlay');
-        var auth_form = document.querySelector('.auth-form');
-        var auth_forms = document.querySelector('.auth-forms');
-        var backs = document.querySelectorAll('.js-back');
-        
-        for(const header of headers)
-            {
-                if(header.innerHTML.length == 9)
-                    {
-                        header.addEventListener('click', function(){
-                            modal.classList.add('add_index');
-                            modal__overlay.classList.add('open');
-                            auth_forms.classList.add('open');
-                        })
-                        // for(const header_1 of headers_1)
-                        //     {
-                        //         if(header_1.innerHTML.length == 9)
-                        //             {
-                        //                 header_1.addEventListener('click', function(){
-                        //                     auth_form.classList.add('open')
-                        //                     auth_forms.classList.add('remove')
-                        //                 })
-                        //             }
-                        //         else
-                        //             {
-                        //                 header_1.addEventListener('click', function(){
-                        //                     auth_form.classList.add('remove')
-                        //                     auth_forms.classList.add('open')
-                        //                 })
-                        //             }
-                        //     }
-                    }
-                else
-                    {
-                        header.addEventListener('click', function(){
-                            modal.classList.add('add_index');
-                            modal__overlay.classList.add('open');
-                            auth_form.classList.add('open');
-                        })
-                        // for(const header_1 of headers_1)
-                        //     {
-                        //         if(header_1.innerHTML.length == 9)
-                        //             {
-                        //                 header_1.addEventListener('click', function(){
-                        //                     auth_form.classList.add('open')
-                        //                     auth_forms.classList.add('remove')
-                        //                 })
-                        //             }
-                        //         else
-                        //             {
-                        //                 header_1.addEventListener('click', function(){
-                        //                     auth_form.classList.add('remove')
-                        //                     auth_forms.classList.add('open')
-                        //                 })
-                        //             }
-                        //     }
-                    }
-            }
-
-        // for(const header_1 of headers_1)
-        // {
-        //     if(header_1.innerHTML.length == 9)
-        //         {
-        //             header_1.addEventListener('click', function(){
-        //                 modal.classList.add('add_index')
-        //                 modal__overlay.classList.add('open')
-        //                 auth_form.classList.add('open')
-        //                 auth_forms.classList.add('remove')
-        //             })
-        //         }
-        //     else
-        //         {
-        //             header.addEventListener('click', function(){
-        //                 modal.classList.add('add_index')
-        //                 modal__overlay.classList.add('open')
-        //                 auth_form.classList.add('remove')
-        //                 auth_forms.classList.add('open')
-        //             })
-        //         }
-        // }
-
-        function remove(){
-            modal.classList.remove('add_index');
-            modal__overlay.classList.remove('open');
-            auth_form.classList.remove('open');
-            auth_forms.classList.remove('open');
-        }
-
-        for( back of backs)
-            {
-                back.addEventListener('click',remove)
-            }
-    </script>
 </body>
 </html>

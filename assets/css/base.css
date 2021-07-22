@@ -200,6 +200,91 @@ html{
     border-radius: 2px;
 }
 
-.pagination-item-icon{
+.footer-background{
+    background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/49b5753902db445292818641f17183b0.png);
+}
 
+.footer-visa{
+    background-size: 1390.909090909091% 1194.4444444444443%;
+    background-position: 73.52112676056338% 5.0761421319796955%;
+}
+
+.footer-mastercard{
+    background-size: 1390.909090909091% 741.3793103448276%;
+    background-position: 44.50704225352113% 5.376344086021505%;
+}
+
+.footer-jcb{
+    background-size: 1390.909090909091% 934.7826086956521%;
+    background-position: 37.183098591549296% 30.729166666666668%;
+}
+
+.footer-amex{
+    background-size: 1530% 977.2727272727273%;
+    background-position: 11.188811188811188% 5.181347150259067%;
+}
+
+.footer-cod_footer{
+    background-size: 1530% 741.3793103448276%;
+    background-position: 79.3006993006993% 25.806451612903224%;
+}
+
+.footer-installment_footer{
+    background-size: 1390.909090909091% 741.3793103448276%;
+    background-position: 79.85915492957747% 52.1505376344086%;
+}
+
+.footer-shopeepay{
+    background-size: 765% 1131.578947368421%;
+    background-position: 63.00751879699248% 24.489795918367346%;
+}
+
+.footer-shopee-express{
+    background-size: 689.1891891891892% 1194.4444444444443%;
+    background-position: 59.78593272171254% 5.0761421319796955%;
+}
+
+.footer-shopee-ghtk{
+    background-size: 1390.909090909091% 1194.4444444444443%;
+    background-position: 19.295774647887324% 51.776649746192895%;
+}
+
+.footer-shopee-ghn{
+    background-size: 1390.909090909091% 741.3793103448276%;
+    background-position: 8.732394366197184% 54.83870967741935%;
+}
+
+.footer-shopee-viettel_post{
+    background-size: 597.65625% 167.96875%;
+    background-position: 65.77708006279435% 100%;
+}
+
+.footer-shopee-vnpost{
+    background-size: 1390.909090909091% 796.2962962962963%;
+    background-position: 100% 5.319148936170213%;
+}
+
+.footer-shopee-jnt{
+    background-size: 1390.909090909091% 1343.75%;
+    background-position: 84.08450704225352% 5.025125628140704%;
+}
+
+.footer-shopee-grab_express{
+    background-size: 570.8955223880597% 741.3793103448276%;
+    background-position: 25.673534072900157% 5.376344086021505%;
+}
+
+.footer-shopee-now{
+    background-size: 956.25% 268.75%;
+    background-position: 46.13138686131387% 77.77777777777777%;
+}
+
+.footer-shopee-ninja-van{
+    background-size: 1275% 826.9230769230769%;
+    background-position: 48.08510638297872% 31.21693121693122%;
+}
+
+.footer-shopee-best-express{
+    background-size: 1062.5% 716.6666666666666%;
+    background-position: 10.1010101010101% 28.10810810810811%;
 }
