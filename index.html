@@ -437,11 +437,156 @@
                 }
         </script>
 
-
         <!-- Not logged  -->
+        <div class="home_banner remove">
+            <div class="grid">
+                <div class="home_banner-imgs">
+                    <div class="home_banner-imgs-container">
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="/assets/img/banner1.png" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/66b7455dacf0984a9a2be9bf286b3e3f_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/617421b2dd37c25827b985d1cd6a051d_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/ddc6f4021501a029cf2ecbd043e9b938_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/da24bb5041dcd1f0f7f7d58706e1527a_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/c8fbe86843946135e91a8eb2ea80a382_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/1de5b9c17ce650771da8199b21fca9f7_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/82ec48ed91c8f3425487247051fe17b7_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/934bdcfabe9b367d58161475ee8b90e6_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/65780d07fb50f7cca1c1eab8ccb62859_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/6f43b7ca85f7de60749e4aebf920d01f_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/4ecf5b0620761d97b367ae209066c369_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/1e20c599485a781097c35559c2935436_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="https://cf.shopee.vn/file/f7cd41140be80dbcf42216c76b7f1a81_xxhdpi" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="/assets/img/banner2.png" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <div class="home_banner-imgs-slide fade">
+                            <a href="">
+                                <img src="/assets/img/banner3.png" alt="" style="width: 100%;">
+                            </a>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        <div class="button_dot">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                            <span class="dot" onclick="currentSlide(6)"></span>
+                            <span class="dot" onclick="currentSlide(7)"></span>
+                            <span class="dot" onclick="currentSlide(8)"></span>
+                            <span class="dot" onclick="currentSlide(9)"></span>
+                            <span class="dot" onclick="currentSlide(10)"></span>
+                            <span class="dot" onclick="currentSlide(11)"></span>
+                            <span class="dot" onclick="currentSlide(12)"></span>
+                            <span class="dot" onclick="currentSlide(13)"></span>
+                            <span class="dot" onclick="currentSlide(14)"></span>
+                            <span class="dot" onclick="currentSlide(15)"></span>
+                            <span class="dot" onclick="currentSlide(16)"></span>
+
+                        </div>
+                    </div>
+                    <script>
+                            var slideIndex = 0;
+                            function plusSlides(n) {
+                                showSlides(slideIndex += n);
+                            }
+
+                            function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                            }
+                    
+                            function showSlides() {
+                                var i;
+                                var slides = document.getElementsByClassName("home_banner-imgs-slide");
+                                var dots = document.getElementsByClassName("dot");
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slideIndex++;
+                                if (slideIndex > slides.length) {slideIndex = 1};
+                                slides[slideIndex-1].style.display = "block";
+                                dots[slideIndex-1].className += " active";
+                                setTimeout(showSlides, 4000);
+                            }
+                            showSlides();
+                    </script>
+                    <div class="home_banner-img">
+                        <div>
+                            <img src="/assets/img/banner2.png" alt="" style="width: 100%;">
+                        </div>
+                        <div>
+                            <img src="/assets/img/banner3.png" alt="" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 
         <!-- Logged -->
-        <div class="app_container">
+        <div class="app_container remove">
             <div class="grid">
                 <div class="grid__row app_content">
                     <div class="grid__column-2">
@@ -1647,6 +1792,8 @@
                 </div>
             </div>
         </footer>
+
+        
     </div>
 </body>
 </html>
